@@ -1,0 +1,177 @@
+
+The normalized length of the sentence is calculated
+as the ratio between a number of words in the sentence to the
+number of words in the longest sentence in the document. P (s E< SII1,h,h, .... In)
+represents the probability of the sentences to be included in
+the summary based on the given features possessed by the
+sentence. SENTENCE LEVEL FEATURES
+2.1 Sentence location feature
+The sentences that occur in the beginning and the conclusion
+part of the document are most likely important since most
+documents are hierarchically structured with important information
+in the beginning and the end of the paragraphs. The probability of classification are learned from the
+training data by the following Bayes rule [16]: where s represents
+the set of sentences in the document and fi represents
+the features used in classification stage and S represents the
+set of sentences in the summary. The basic steps in concept
+based summarization are: i) Retrieve concepts of a text from
+IEEE International Conference on Computer, Communication, and Signal Processing (ICCCSP-2017)
+external knowledge base(HowNet, WordNet, Wikipedia) ii)
+Build a conceptual vector or graph model to depict relationship
+between concept and sentences iii) Apply ranking algorithm to
+score sentences iv) Generate summaries based on the ranking
+scores of sentences
+4. The sentences are restricted as a non-summary
+and summary sentence based on the feature possessed by the
+sentence. The first
+step involves labeling the training data using a machinelearning
+approach and then extract features of the sentences
+in both test set and train sets which is then inputted to the
+neural network system to rank the sentences in the document. 1.2 Title Word feature
+The sentences in the original document which consists of
+words mentioned in the title have greater chances to contribute
+to the final summary since they serve as indicators of the theme
+of the document. 1.5 Upper case word feature
+The words which are in uppercase such as "UNICEF" are
+considered to be important words and those sentences that
+consist of these words are termed important in the context of
+sentence selection for the final summary. The unsupervised approaches do not
+need human summaries (user input) in deciding the important
+features of the document, it requires the most sophisticated
+algorithm to provide compensation for the lack of human
+knowledge. The major drawback with the
+supervised approach is that it requires known manually created
+summaries by a human to label the sentences in the original
+training document enclosed with "summary sentence" or "nonsummary
+sentence" and it also requires more labeled training
+data for classification. In the methodology proposed [12], the
+importance of sentences is calculated based on the concepts
+retrieved from HowNet instead of words. It is very
+crucial for humans to understand and to describe the content
+of the text. IEEE International Conference on Computer, Communication, and Signal Processing (ICCCSP-2017)
+TABLE I
+SUPERVISED AND UNSUPERVISED LEARNING METHODS FOR TEXT SUMMARIZATION
+Categories Methodology Concept
+SUPERVISED Machine Learning ap- Summarization task
+LEARNING proach Bayes rule modelled as classification
+APPROACHES problem
+Trainable summarization -
+SUPERVISED neural network is trained,
+LEARNING Artificial Neural Net- pruned and generalized to
+APPROACHES work filter sentences and classify
+them as "summary" or
+"non-summary sentence"
+SUPERVISED Statistical modelling ap-
+LEARNING Conditional Random proach which uses CRF as
+APPROACHES Fields (CRF) a sequence labelling prob- lem
+UNSUPERVISED Graph based Construction of graph to
+LEARNING Approach capture relationship be-
+APPROACHES tween sentences
+Importance of sentences
+UNSUPERVISED Concept oriented ap- calculated based on
+LEARNING the concepts retrieved
+APPROACHES proach from external knowledge
+base(wikipedia, HowNet)
+UNSUPERVISED Fuzzy Logic based ap- Summarization based on
+LEARNING fuzzy rule using various
+APPROACHES proach sets of features
+Fig. IEEE International Conference on Computer, Communication, and Signal Processing (ICCCSP-2017)
+1.3 Cue phrase feature
+Cue phrases are words and phrases that indicate the structure
+of the document flow and it is used as a feature in
+sentence selection. The preprocessed
+passage is sent to the feature extraction steps, which
+is based on multiple features of sentences and words. LSA captures the text of the
+input document and excerpt information such as words that
+frequently occur together and words that are commonly seen in
+different sentences. Example of Sentence concept bipartite graph proposed in [4]
+Ladda Suanmali et al [11] proposed fuzzy logic approach
+is used for automatic text summarization which is the initial
+step , the text document is pre-processed followed by feature
+extraction(Title features, Sentence length, Sentence position,
+Sentence-sentence similarity, term weight, Proper noun and
+Numerical data. The summary is generated by ordering the
+ranked sentences in the order they occur in the original
+document to maintain coherency. The sentences in the
+document are represented as a graph and the edges between
+the sentences represents weighted cosine similarity values. The significance
+of sentences is strongly based on statistical and linguistic
+features of sentences. Ramanathan
+978-1-5090-3716-2/17/$31.00 ©2017 IEEE
+Advantages Limitations
+Large set of training data im- Human interruption required for proves the sentence selection for generating manual summaries summary
+The network can be trained ac- I)Neural Network is slow in
+cording to the style of human training phase and also in apreader. The approach specified
+in [20]uses CRF as a sequence labelling problem and also
+captures interaction between sentences through the features
+extracted for each sentence and it also incorporates complex
+features such as LSA_scores [21] and lilTS_score [22] but
+the limitation is that linguistic features are not considered. In text Summarization, the most challenging task is
+to summarize the contented from a number of semistructured
+sources and textual, which includes web pages
+and databases, in the proper way (size, format, time,
+language,) for an explicit user. The major phase
+is the feature fusion phase where the relationship between
+the features are identified through two stages 1) eliminating
+infrequent features 2) collapsing frequent features after
+which sentence ranking is done to identify the important
+summary sentences.Neural Network [17]after feature fusion
+is depicted in Fig 8. The main problem in evaluation comes from
+the impossibility of building a standard against which the
+results of the systems that have to be compared. 2.4 Sentence-to-Sentence Cohesion
+The cohesion between sentences for every sentence(s), the
+similarity between s and alternative sentences are calculated
+which are summed up and coarse value of the aspect is
+obtained for s. The feature values are normalized between
+[0, 1] where value closer to 1.0 indicates a higher degree of
+cohesion between sentences. The main advantage of the method is that
+it is able to identify correct features and provides a better
+representation of sentences and groups terms appropriately
+into its segments. The
+scores obtained after the feature extraction are fed to the
+neural network, which produces a single value as output score,
+signifying the importance of the sentences. From Fig6 [13] it is to
+be noted in order that dl is associated to d2 than dO and the
+conversation 'walked' is linked to the talk 'man' but it is not
+significant to the word 'park'. Neural network after training (a) and after pruning (b) [17]
+In the approach proposed in [18], RankNet algorautomaticallyithm
+using neural nets to identify the important sentences
+in the document. Index Terms-Text Summarization, Unsupervised Learning,
+Supervised Learning, Sentence Fusion, Extraction Scheme, Sentence
+Revision, Extractive Summary
+I. INTRODUCTION
+In a recent advance, the significance of text summarization
+[1] accomplishes more attention due to data inundation on
+the web. However, the work has not focused the different
+challenges of extractive text summarization process to its full
+intensity in premises of time and space complication. Another graph based approach
+LexRank [6], where the salience of the sentence is determined
+by the concept of Eigen vector centrality. The sentence that consists of main keywords is most
+likely included in the final summary. The main advantage
+of a text summarization is reading time of the user can be
+reduced. A conceptual vector
+model is built to obtain a rough summarization and similarity
+measures are calculated between the sentences to reduce
+redundancy in the final summary. B. SUPERVISED LEARNING METHODS
+Supervised extractive summarizationrelated techniques are
+based on a classification approach at sentence level where
+the system learns by examples to classify between summary
+and non-summary sentences. FEATURES FOR EXTRACTIVE TEXT
+SUMMARIZATION
+Earlier techniques involve assigning a score to sentences
+based on a countenance that are predefined based on the
+methodology applied. The
+sentences are clustered into groups based on their similarity
+measures and then the sentences are ranked based on their
+LexRank scores similar to PageRank algorithm [7]except that
+the similarity graph is undirected in LexRank method. Dharmendra Hingu, Deep Shah and
+Sandeep S.Udmale proposed an extractive approach [19]for
+summarizing the Wikipedia articles by identifying the text
+features and scoring the sentences by incorporating neural
+network model [5]. Count(N-gram) is the number of N-grams in the set of
+reference summaries. The implication of sentences is determined based on linguistic
+and statistical features. The proposed system overcomes the issues faced
+by non-negative matrix Factorization (NMF) methods by incorporating
+conditional random fields (CRF) to identify and
+extract correct features to determine the important sentence
+of the given text.
